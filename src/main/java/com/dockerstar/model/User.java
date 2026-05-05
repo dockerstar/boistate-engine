@@ -30,7 +30,11 @@ public class User {
     }
 
     public void setAge(Integer age) {
-        this.age = age;
+        if (age>18) {
+            this.age = age;
+        } else {
+            throw new IllegalArgumentException("Возраст должен быть больше 18");
+        }
     }
 
     @Override
