@@ -1,17 +1,21 @@
 package com.dockerstar;
 
+import com.dockerstar.model.Biomarker;
+import com.dockerstar.model.User;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        User user1 = new User(0,"Dima", 20);
+        User user2 = new User(1, "Renat", 21);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Biomarker biomarker1 = new Biomarker("Test1", 30.0, 0);
+        Biomarker biomarker2 = new Biomarker("Test2", 100.0, 1);
+
+        System.out.println(user1);
+        System.out.println(user2);
+        System.out.println(biomarker1);
+        System.out.println(biomarker2);
     }
 }
