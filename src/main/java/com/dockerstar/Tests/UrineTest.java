@@ -9,6 +9,6 @@ public class UrineTest extends MedicalTest implements AnalysisResult{
 
     @Override
     public String interpret() {
-        return "Анализы мочи в норме";
+        return "Анализы мочи в норме!";
     }
 }
