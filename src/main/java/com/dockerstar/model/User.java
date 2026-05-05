@@ -11,11 +11,11 @@ public class User {
         this.age = age;
     }
 
+    User(){}
+
     public Integer getId() {
         return id;
     }
-
-
 
     public String getName() {
         return name;
@@ -30,7 +30,11 @@ public class User {
     }
 
     public void setAge(Integer age) {
-        this.age = age;
+        if(age>18) {
+            this.age = age;
+        } else {
+            throw new IllegalArgumentException("Возраст не может быть меньше 18");
+        }
     }
 
     @Override
